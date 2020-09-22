@@ -6,7 +6,7 @@ setup(
                           compiler_directives={'language_level': "3"}),
     name='NlpToolkit-Sampling-Cy',
     version='1.0.0',
-    packages=['Sampling-Cy'],
+    packages=['Sampling'],
     url='https://github.com/olcaytaner/Sampling-Cy',
     license='',
     author='olcaytaner',
