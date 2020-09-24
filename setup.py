@@ -5,7 +5,7 @@ setup(
     ext_modules=cythonize(["Sampling/*.pyx", "Sampling/*.pxd"],
                           compiler_directives={'language_level': "3"}),
     name='NlpToolkit-Sampling-Cy',
-    version='1.0.0',
+    version='1.0.1',
     packages=['Sampling'],
     url='https://github.com/olcaytaner/Sampling-Cy',
     license='',
