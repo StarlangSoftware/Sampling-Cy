@@ -3,8 +3,6 @@ import random
 
 cdef class Bootstrap:
 
-    cdef list __instanceList
-
     def __init__(self, instanceList: list, seed: int):
         """
         A constructor of Bootstrap class which takes a sample an array of instances and a seed number, then creates a
