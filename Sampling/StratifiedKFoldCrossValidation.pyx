@@ -1,11 +1,7 @@
-from Sampling.KFoldCrossValidation cimport KFoldCrossValidation
 import random
 
 
 cdef class StratifiedKFoldCrossValidation(KFoldCrossValidation):
-
-    cdef list __instanceLists
-    cdef list _N
 
     def __init__(self, instanceLists: list, K: int, seed: int):
         """

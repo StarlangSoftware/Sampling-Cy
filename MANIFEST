@@ -10,5 +10,6 @@ Sampling/KFoldCrossValidation.c
 Sampling/KFoldCrossValidation.pxd
 Sampling/KFoldCrossValidation.pyx
 Sampling/StratifiedKFoldCrossValidation.c
+Sampling/StratifiedKFoldCrossValidation.pxd
 Sampling/StratifiedKFoldCrossValidation.pyx
 Sampling/__init__.py
