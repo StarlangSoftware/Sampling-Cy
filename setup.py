@@ -8,9 +8,9 @@ setup(
     version='1.0.4',
     packages=['Sampling'],
     package_data={'Sampling': ['*.pxd', '*.pyx', '*.c']},
-    url='https://github.com/olcaytaner/Sampling-Cy',
+    url='https://github.com/StarlangSoftware/Sampling-Cy',
     license='',
     author='olcaytaner',
-    author_email='olcaytaner@isikun.edu.tr',
+    author_email='olcay.yildiz@ozyegin.edu.tr',
     description='Data sampling library'
 )
