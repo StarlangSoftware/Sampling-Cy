@@ -2,14 +2,14 @@ from setuptools import setup
 
 from pathlib import Path
 this_directory = Path(__file__).parent
-long_description = (this_directory / "README.md").read_text()
+long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 from Cython.Build import cythonize
 
 setup(
     ext_modules=cythonize(["Sampling/*.pyx", "Sampling/*.pxd"],
                           compiler_directives={'language_level': "3"}),
     name='NlpToolkit-Sampling-Cy',
-    version='1.0.5',
+    version='1.0.6',
     packages=['Sampling'],
     package_data={'Sampling': ['*.pxd', '*.pyx', '*.c']},
     url='https://github.com/StarlangSoftware/Sampling-Cy',
