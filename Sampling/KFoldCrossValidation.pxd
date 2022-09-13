@@ -2,7 +2,7 @@ from Sampling.CrossValidation cimport CrossValidation
 
 cdef class KFoldCrossValidation(CrossValidation):
 
-    cdef list __instanceList
+    cdef list __instance_list
     cdef int __N
 
     cpdef list getTrainFold(self, int k)

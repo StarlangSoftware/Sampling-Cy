@@ -3,7 +3,10 @@ import random
 
 cdef class StratifiedKFoldCrossValidation(KFoldCrossValidation):
 
-    def __init__(self, instanceLists: list, K: int, seed: int):
+    def __init__(self,
+                 instance_lists: list,
+                 K: int,
+                 seed: int):
         """
         A constructor of StratifiedKFoldCrossValidation class which takes as set of class samples as an array of array of
         instances, a K (K in K-fold cross-validation) and a seed number, then shuffles each class sample using the
@@ -11,7 +14,7 @@ cdef class StratifiedKFoldCrossValidation(KFoldCrossValidation):
 
         PARAMETERS
         ----------
-        instanceLists : list
+        instance_lists : list
             Original class samples. Each element of the this array is a sample only from one class.
         K : int
             K in K-fold cross-validation
@@ -19,12 +22,12 @@ cdef class StratifiedKFoldCrossValidation(KFoldCrossValidation):
             Random number to create K-fold sample(s)
         """
         cdef int i
-        self.__instanceLists = instanceLists
+        self.__instance_lists = instance_lists
         self._N = []
-        for i in range(len(instanceLists)):
+        for i in range(len(instance_lists)):
             random.seed(seed)
-            random.shuffle(instanceLists[i])
-            self._N.append(len(instanceLists[i]))
+            random.shuffle(instance_lists[i])
+            self._N.append(len(instance_lists[i]))
         self.K = K
 
     cpdef list getTrainFold(self, int k):
@@ -42,13 +45,13 @@ cdef class StratifiedKFoldCrossValidation(KFoldCrossValidation):
             Produced training sample
         """
         cdef int i, j
-        cdef list trainFold = []
+        cdef list train_fold = []
         for i in range(len(self._N)):
             for j in range((k * self._N[i]) // self.K):
-                trainFold.append(self.__instanceLists[i][j])
+                train_fold.append(self.__instance_lists[i][j])
             for j in range(((k + 1) * self._N[i]) // self.K, self._N[i]):
-                trainFold.append(self.__instanceLists[i][j])
-        return trainFold
+                train_fold.append(self.__instance_lists[i][j])
+        return train_fold
 
     cpdef list getTestFold(self, int k):
         """
@@ -65,8 +68,8 @@ cdef class StratifiedKFoldCrossValidation(KFoldCrossValidation):
             Produced testing sample
         """
         cdef int i, j
-        cdef list testFold = []
+        cdef list test_fold = []
         for i in range(len(self._N)):
             for j in range((k * self._N[i]) // self.K, ((k + 1) * self._N[i]) // self.K):
-                testFold.append(self.__instanceLists[i][j])
-        return testFold
+                test_fold.append(self.__instance_lists[i][j])
+        return test_fold

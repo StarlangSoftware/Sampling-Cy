@@ -3,7 +3,7 @@ from Sampling.KFoldCrossValidation cimport KFoldCrossValidation
 
 cdef class StratifiedKFoldCrossValidation(KFoldCrossValidation):
 
-    cdef list __instanceLists
+    cdef list __instance_lists
     cdef list _N
 
     cpdef list getTrainFold(self, int k)
