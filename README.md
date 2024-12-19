@@ -18,7 +18,7 @@ Video Lectures
 
 For Developers
 ============
-You can also see [Python](https://github.com/starlangsoftware/Sampling-Py), [Java](https://github.com/starlangsoftware/Sampling), [C++](https://github.com/starlangsoftware/Sampling-CPP), [C](https://github.com/starlangsoftware/Sampling-C), [Swift](https://github.com/starlangsoftware/Sampling-Swift), [Js](https://github.com/starlangsoftware/Sampling-Js), or [C#](https://github.com/starlangsoftware/Sampling-CS) repository.
+You can also see [Python](https://github.com/starlangsoftware/Sampling-Py), [Java](https://github.com/starlangsoftware/Sampling), [C++](https://github.com/starlangsoftware/Sampling-CPP), [C](https://github.com/starlangsoftware/Sampling-C), [Swift](https://github.com/starlangsoftware/Sampling-Swift), [Js](https://github.com/starlangsoftware/Sampling-Js), [Php](https://github.com/starlangsoftware/Sampling-Php), or [C#](https://github.com/starlangsoftware/Sampling-CS) repository.
 
 ## Requirements
 
