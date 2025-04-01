@@ -8,8 +8,8 @@ from Cython.Build import cythonize
 setup(
     ext_modules=cythonize(["Sampling/*.pyx", "Sampling/*.pxd"],
                           compiler_directives={'language_level': "3"}),
-    name='NlpToolkit-Sampling-Cy',
-    version='1.0.7',
+    name='nlptoolkit-sampling-cy',
+    version='1.0.8',
     packages=['Sampling'],
     package_data={'Sampling': ['*.pxd', '*.pyx', '*.c']},
     url='https://github.com/StarlangSoftware/Sampling-Cy',
